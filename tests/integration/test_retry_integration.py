@@ -3,8 +3,6 @@ from unittest.mock import ANY, AsyncMock
 import httpx
 import pytest
 
-from starlette.applications import Starlette
-
 from a2a.client.base_client import BaseClient
 from a2a.client.client import ClientConfig
 from a2a.client.client_factory import ClientFactory
@@ -25,6 +23,7 @@ from a2a.types.a2a_pb2 import (
     TaskStatus,
 )
 from a2a.utils.constants import TransportProtocol
+from starlette.applications import Starlette
 
 
 TASK_RESPONSE = Task(
